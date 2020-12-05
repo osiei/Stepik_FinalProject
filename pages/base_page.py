@@ -5,7 +5,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 
-from pages.locators import BasePageLocators
+from pages.locators import BasePageLocators, BusketPageLocators
 
 
 class BasePage():
@@ -68,3 +68,7 @@ class BasePage():
 
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
+
+    def go_to_busket(self):
+        busket_button = self.browser.find_element(*BusketPageLocators.BUSKET_BUTTON)
+        busket_button.click()

@@ -21,4 +21,4 @@ class ProductPage(BasePage):
 
     def should_not_be_success_message_with_disappeared(self):
         assert self.is_disappeared(*BusketPageLocators.ALERT_NAME_PRODUCT_IN_BUSKET), \
-            "Success message is presented, but should not be 1"
+            "Success message is presented, but should not be"
