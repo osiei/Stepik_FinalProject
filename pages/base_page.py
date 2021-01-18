@@ -23,10 +23,11 @@ class BasePage():
         except (NoSuchElementException):
             return False
         return True
+
     def find_text_in_element(self, how, what):
         try:
-            element=self.browser.find_element(how, what)
-            text=element.text
+            element = self.browser.find_element(how, what)
+            text = element.text
         except (NoSuchElementException):
             return False
         return text
